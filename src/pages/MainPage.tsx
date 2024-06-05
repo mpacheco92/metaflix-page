@@ -18,7 +18,7 @@ export default function MainPage() {
         question.appendChild(icon);
         question.insertBefore(icon, question.firstChild);
 
-        question.addEventListener('click', () => {
+        item.addEventListener('click', () => {
           const isExpanded = answer.style.maxHeight && answer.style.maxHeight !== '0px';
 
           if (isExpanded) {
@@ -346,7 +346,7 @@ export default function MainPage() {
           <div className="footer-div">
             <h3>Fale Conosco</h3>
             <div>
-              <a href="https://tinyurl.com/metaflix-contato" target="_blank">
+              <a href="https://tinyurl.com/metaflix-contato" target="_blank" className="expand">
                 <i className="bi bi-whatsapp "></i>
                 <p>{`(22) 99248-9516`}</p>
               </a>
