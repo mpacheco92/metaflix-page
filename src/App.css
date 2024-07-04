@@ -43,13 +43,19 @@ main {
   /* border: #670189 solid 2px; */
 }
 
-.bi-arrow-up-circle-fill {
+.scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 50px;
+  opacity: 0.7;
+  font-size: 30px;
   cursor: pointer;
+  transition: opacity 0.3s, visibility 0.3s;
   z-index: 999;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
 }
 
 a {
@@ -722,7 +728,7 @@ footer {
   }
 }
 
-@media (max-width: 394px) {
+@media (max-width: 792px) {
   nav {
     gap: 100px;
   }
@@ -775,12 +781,12 @@ footer {
   }
 
   .tv-3d {
-    width: 250px;
+    width: 343px;
     align-self: center;
     position: static;
     order: 1;
     margin-left: 17px;
-    border: 1px white solid;
+    /* border: 1px white solid; */
   }
 
   .texts-one {
@@ -994,7 +1000,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px yellow solid;
+    /* border: 1px yellow solid; */
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
