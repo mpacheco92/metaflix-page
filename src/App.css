@@ -722,9 +722,9 @@ footer {
   }
 }
 
-@media (max-width: 792px) {
+@media (max-width: 394px) {
   nav {
-    gap: 120px;
+    gap: 100px;
   }
 
   .nav-itens {
@@ -775,11 +775,12 @@ footer {
   }
 
   .tv-3d {
-    width: 460px;
+    width: 250px;
     align-self: center;
     position: static;
     order: 1;
     margin-left: 17px;
+    border: 1px white solid;
   }
 
   .texts-one {
@@ -830,12 +831,16 @@ footer {
 
   .btn-acess {
     background-color: #670189;
-    width: 320px;
+    width: 270px;
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
     animation: pulse 1.5s infinite;
     align-self: center;
+  }
+
+  .btn-acess a {
+    font-size: 15px;
   }
 
   .dispositivos-img {
@@ -938,8 +943,11 @@ footer {
 
   .part-five .btn-acess {
     margin: 50px auto;
-    width: 300px;
+    width: 270px;
+    font-size: 15px;
   }
+
+  
 
   footer {
     display: flex;
@@ -977,14 +985,16 @@ footer {
   }
 
   .bi-arrow-up-circle-fill {
-    right: 50px;
+    right: 5px;
+    opacity: 0.7;
+    font-size: 30px;
   }
 
   main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px yellow solid; */
+    border: 1px yellow solid;
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
