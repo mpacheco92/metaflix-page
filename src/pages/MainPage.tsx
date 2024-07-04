@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import tv3d from '../images/tv3d.png';
+import tv3d from '../images/tv3d2.png';
 import watch from '../images/watch.png';
 import { images } from '../components/ArrayLogos';
 import { useEffect } from 'react';
@@ -371,7 +371,7 @@ export default function MainPage() {
             </div>
           </div>
         </footer>
-        <p className="direitos italico">Metaflix Entretenimento - Todos os direitos reservados - 2024</p>
+        <p className="direitos">Metaflix Entretenimento - 2024 | Todos os direitos reservados.</p>
         <a href="#"><i className="bi bi-arrow-up-circle-fill"></i></a>
       </main>
     </div>
