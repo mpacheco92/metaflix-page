@@ -2,9 +2,33 @@ import Header from '../components/Header';
 import tv3d from '../images/tv3d2.png';
 import watch from '../images/watch.png';
 import { images } from '../components/ArrayLogos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function MainPage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
   useEffect(() => {
     const faqItems = document.querySelectorAll<HTMLElement>('.faq-item');
 
@@ -372,7 +396,13 @@ export default function MainPage() {
           </div>
         </footer>
         <p className="direitos">Metaflix Entretenimento - 2024 | Todos os direitos reservados.</p>
-        <a href="#"><i className="bi bi-arrow-up-circle-fill"></i></a>
+        <div>
+          {isVisible && (
+            <a href="#" onClick={scrollToTop}>
+              <i className="bi bi-arrow-up-circle-fill scroll-to-top"></i>
+            </a>
+          )}
+        </div>
       </main>
     </div>
   )
