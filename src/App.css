@@ -554,7 +554,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: yellow 1px solid;
+    /* border: yellow 1px solid; */
     margin-left: 20px;
     margin-right: 20px;
   }
