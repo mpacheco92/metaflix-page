@@ -16,7 +16,8 @@ export default function MainPage() {
     }
   };
 
-  const scrollToTop = () => {
+  const scrollToTop = (event: any) => {
+    event.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
