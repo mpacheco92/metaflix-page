@@ -89,6 +89,7 @@ nav ul {
 .nav-itens {
   display: flex;
   align-items: center;
+  /* border: yellowgreen 1px solid; */
 }
 
 .nav-itens li {
@@ -296,7 +297,7 @@ nav ul {
   text-align: center;
   align-items: center;
   /* border: #ec1bff solid 1px; */
-  width: calc(100vw - 8px);
+  width: calc(100vw - 10px);
 }
 
 .part-three h1 {
@@ -352,7 +353,7 @@ nav ul {
   gap: 20px;
   margin-left: calc(-50vw + 50%);
   text-align: center;
-  width: calc(100vw - 8px);
+  width: calc(100vw - 10px);
   /* border: #ec1bff 2px solid; */
 }
 
@@ -652,7 +653,7 @@ footer {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    width: 100%;
     /* Largura total da viewport */
     height: 100%;
     background-image: url('../src/images/watch.png');
@@ -690,7 +691,7 @@ footer {
     text-align: center;
     align-items: center;
     /* border: #ec1bff solid 1px; */
-    width: calc(100vw - 8px);
+    width: calc(100vw - 20px);
   }
 
   .part-three h1 {
