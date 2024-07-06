@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import tv3d from '../images/tv3d2.png';
 import watch from '../images/watch.png';
+import metaflix from '../images/logo.png';
 import { images } from '../components/ArrayLogos';
 import { useEffect, useState } from 'react';
 
@@ -15,7 +16,8 @@ export default function MainPage() {
     }
   };
 
-  const scrollToTop = () => {
+  const scrollToTop = (event: any) => {
+    event.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -361,7 +363,7 @@ export default function MainPage() {
         </section>
         <footer className="contact" id="contatos">
           <div className="footer-metalfix">
-            <img src="src/images/logo.png" alt="metaflix-logo" />
+            <img src={metaflix} alt="metaflix-logo" />
             <div>
               <p>A <b className="destaque italico">Metaflix</b> é uma plataforma de assinatura que oferece uma ampla programação de TV para públicos de todas as idades.</p>
             </div>
