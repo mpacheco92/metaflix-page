@@ -41,7 +41,7 @@ export default function Header() {
           <li><a href="#planos" className="scroll-link" onClick={handleScroll}>Planos</a></li>
           <li><a href="#perguntas" className="scroll-link" onClick={handleScroll}>FAQs</a></li>
           <li><a href="#contatos" className="scroll-link" onClick={handleScroll}>Contato</a></li>
-          <a href="https://tinyurl.com/metaflix-contato" target="_blank"><li className="move-link negrito">Acesse agora</li></a>
+          <a href="https://tinyurl.com/metaflix-contact" target="_blank"><li className="move-link negrito">Acesse agora</li></a>
         </ul>
       </nav>
     </header>

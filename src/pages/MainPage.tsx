@@ -69,7 +69,7 @@ export default function MainPage() {
           <div className="texts-one">
             <h1>Você acabou de encontrar<br /> <span className="destaque">A MELHOR PLATAFORMA<br /> de IPTV</span> do Brasil</h1>
             <h2>Assista seus programas favoritos sem travamentos,<br /> estabilidade de sinal e muita qualidade de som e imagem.</h2>
-            <h3 className="btn-acess"><a href="https://tinyurl.com/metaflix-contato" target="_blank">QUERO ACESSAR AGORA</a></h3>
+            <h3 className="btn-acess"><a href="https://tinyurl.com/metaflix-contact" target="_blank">QUERO ACESSAR AGORA</a></h3>
           </div>
           <img src={tv3d} alt="tv-3d" className="tv-3d" />
         </section>
@@ -208,7 +208,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a href="https://tinyurl.com/metaflix-contato" target="_blank">
+                <a href="https://tinyurl.com/metaflix-contact" target="_blank">
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -255,7 +255,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a href="https://tinyurl.com/metaflix-contato" target="_blank">
+                <a href="https://tinyurl.com/metaflix-contact" target="_blank">
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -302,7 +302,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a href="https://tinyurl.com/metaflix-contato" target="_blank">
+                <a href="https://tinyurl.com/metaflix-contact" target="_blank">
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -357,7 +357,7 @@ export default function MainPage() {
             <h3 className="faq-question">Como funciona o pagamento e as renovações?</h3>
             <p className="faq-answer">Você pode renovar nossos planos mensais via PIX ou cartão de crédito, tudo direto com nosso suporte no WhatsApp. Além disso, temos alternativas mais prolongadas, como trimestrais e semestrais, com descontos proporcionais ao período. A decisão é sua. Lembre-se de que nossas assinaturas não possuem multas nem fidelidade.</p>
           </div>
-          <a href="https://tinyurl.com/metaflix-contato" target="_blank">
+          <a href="https://tinyurl.com/metaflix-contact" target="_blank">
             <h3 className="btn-acess">QUERO ACESSAR AGORA</h3>
           </a>
         </section>
@@ -372,7 +372,7 @@ export default function MainPage() {
           <div className="footer-div">
             <h3>Fale Conosco</h3>
             <div>
-              <a href="https://tinyurl.com/metaflix-contato" target="_blank" className="expand">
+              <a href="https://tinyurl.com/metaflix-contact" target="_blank" className="expand">
                 <i className="bi bi-whatsapp "></i>
                 <p>{`(22) 99248-9516`}</p>
               </a>
