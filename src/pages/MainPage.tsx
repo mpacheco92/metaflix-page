@@ -4,9 +4,17 @@ import watch from '../images/watch.png';
 import metaflix from '../images/logo.png';
 import { images } from '../components/ArrayLogos';
 import { useEffect, useState } from 'react';
+import ButtonMain from '../components/ButtonMain';
+import Popup from '../components/Popup';
 
 export default function MainPage() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+
+  const changePopup = () => {
+    setShowPopup(!showPopup);
+  }
+
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -63,13 +71,14 @@ export default function MainPage() {
 
   return (
     <div>
+      {showPopup && <Popup setShowPopup={setShowPopup}/>}
       <Header />
       <main>
         <section className="part-one">
           <div className="texts-one">
             <h1>Você acabou de encontrar<br /> <span className="destaque">A MELHOR PLATAFORMA<br /> de IPTV</span> do Brasil</h1>
             <h2>Assista seus programas favoritos sem travamentos,<br /> estabilidade de sinal e muita qualidade de som e imagem.</h2>
-            <h3 className="btn-acess"><a href="https://tinyurl.com/metaflix-contact" target="_blank">QUERO ACESSAR AGORA</a></h3>
+            <ButtonMain />
           </div>
           <img src={tv3d} alt="tv-3d" className="tv-3d" />
         </section>
@@ -208,9 +217,10 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a href="https://tinyurl.com/metaflix-contact" target="_blank">
+                <a onClick={changePopup}>
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
+
                 </a>
               </div>
             </div>
@@ -255,7 +265,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a href="https://tinyurl.com/metaflix-contact" target="_blank">
+                <a onClick={changePopup}>
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -302,7 +312,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a href="https://tinyurl.com/metaflix-contact" target="_blank">
+                <a onClick={changePopup}>
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -357,7 +367,7 @@ export default function MainPage() {
             <h3 className="faq-question">Como funciona o pagamento e as renovações?</h3>
             <p className="faq-answer">Você pode renovar nossos planos mensais via PIX ou cartão de crédito, tudo direto com nosso suporte no WhatsApp. Além disso, temos alternativas mais prolongadas, como trimestrais e semestrais, com descontos proporcionais ao período. A decisão é sua. Lembre-se de que nossas assinaturas não possuem multas nem fidelidade.</p>
           </div>
-          <a href="https://tinyurl.com/metaflix-contact" target="_blank">
+          <a onClick={changePopup}>
             <h3 className="btn-acess">QUERO ACESSAR AGORA</h3>
           </a>
         </section>

@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import logo from '../images/logo.png';
+import Popup from './Popup';
 
 export default function Header() {
   const [active, setActive] = useState(false);
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+
+  const changePopup = () => {
+    setShowPopup(!showPopup);
+  }
+
 
   function animatedLink() {
     const navLinks = document.querySelectorAll('li');
@@ -25,11 +32,13 @@ export default function Header() {
     targetElement && targetElement.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
+  return (<>
+    {showPopup && <Popup setShowPopup={setShowPopup} />}
     <header>
       <nav>
         <img src={logo} alt="logo-metaflix" className="logo-img" />
         <div
+
           className={`mobile-menu ${active ? 'active' : ''}`}
           onClick={handleClick}
         >
@@ -41,9 +50,10 @@ export default function Header() {
           <li><a href="#planos" className="scroll-link" onClick={handleScroll}>Planos</a></li>
           <li><a href="#perguntas" className="scroll-link" onClick={handleScroll}>FAQs</a></li>
           <li><a href="#contatos" className="scroll-link" onClick={handleScroll}>Contato</a></li>
-          <a href="https://tinyurl.com/metaflix-contact" target="_blank"><li className="move-link negrito">Acesse agora</li></a>
+          <a onClick={changePopup}><li className="move-link negrito">Acesse agora</li></a>
         </ul>
       </nav>
     </header>
+  </>
   )
 };
