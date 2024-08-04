@@ -16,7 +16,7 @@ const Popup: React.FC<PopupProps> = ({ setShowPopup }) => {
           X
         </button>
         <div className="popup-content">
-          Você será redirecionado para o WhatsApp!<br /><br />Inicie a conversa para receber seu acesso.
+          Ao clicar no botão abaixo, você será redirecionado para o WhatsApp. <br/><br/> Inicie a conversa para receber seu acesso.
         </div>
         <button className='popup-btn'>
           <h2>
