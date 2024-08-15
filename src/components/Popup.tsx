@@ -20,7 +20,7 @@ const Popup: React.FC<PopupProps> = ({ setShowPopup }) => {
         </div>
         <button className='popup-btn'>
           <h2>
-            <a href="https://tinyurl.com/metaflix-contact" target="_blank" onClick={ () => setShowPopup(false) }>
+            <a href="https://tinyurl.com/metaflix-service" target="_blank" onClick={ () => setShowPopup(false) }>
               QUERO MEU ACESSO
             </a>
           </h2>
