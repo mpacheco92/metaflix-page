@@ -1,0 +1,26 @@
+services:
+  metaflix-page:
+    build: .
+    container_name: metaflix-page
+    labels:
+      - "traefik.enable=true"
+      # Configuração para HTTPS - incluindo www
+      - "traefik.http.routers.metaflix-secure.rule=Host(`metaflixtv.shop`) || Host(`www.metaflixtv.shop`)"
+      - "traefik.http.routers.metaflix-secure.entrypoints=websecure"
+      - "traefik.http.routers.metaflix-secure.tls=true"
+      - "traefik.http.routers.metaflix-secure.tls.certresolver=leresolver"
+      # Redirecionamento HTTP para HTTPS - incluindo www
+      - "traefik.http.routers.metaflix.rule=Host(`metaflixtv.shop`) || Host(`www.metaflixtv.shop`)"
+      - "traefik.http.routers.metaflix.entrypoints=web"
+      - "traefik.http.routers.metaflix.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+      # Configuração do serviço
+      - "traefik.http.services.metaflix.loadbalancer.server.port=80"
+    networks:
+      - metaflix
+    restart: always
+
+networks:
+  metaflix:
+    external: true

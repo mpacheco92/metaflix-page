@@ -407,7 +407,7 @@ export default function MainPage() {
             </div>
           </div>
         </footer>
-        <p className="direitos">Metaflix Entretenimento - 2025 | Todos os direitos reservados.</p>
+        <p className="direitos">© 2025 Metaflix Entretenimento | Todos os direitos reservados.</p>
         <div>
           {isVisible && (
             <a href="#" onClick={scrollToTop}>
