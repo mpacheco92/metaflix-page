@@ -382,9 +382,9 @@ export default function MainPage() {
           <div className="footer-div">
             <h3>Fale Conosco</h3>
             <div>
-              <a href="https://tinyurl.com/metaflix-contact" target="_blank" className="expand">
+              <a href="https://tinyurl.com/metaflix-service" target="_blank" className="expand">
                 <i className="bi bi-whatsapp "></i>
-                <p>{`(22) 99248-9516`}</p>
+                <p>{`(22) 99266-1644`}</p>
               </a>
             </div>
           </div>
@@ -407,7 +407,7 @@ export default function MainPage() {
             </div>
           </div>
         </footer>
-        <p className="direitos">Metaflix Entretenimento - 2024 | Todos os direitos reservados.</p>
+        <p className="direitos">Metaflix Entretenimento - 2025 | Todos os direitos reservados.</p>
         <div>
           {isVisible && (
             <a href="#" onClick={scrollToTop}>
