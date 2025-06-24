@@ -2,13 +2,15 @@ import { useState } from 'react';
 import logo from '../images/logo.png';
 import Popup from './Popup';
 
+const link = "https://api.whatsapp.com/send/?phone=5522992661644&text=Estou+vindo+do+site+e+quero+meu+acesso%21&type=phone_number&app_absent=0";
+
 export default function Header() {
   const [active, setActive] = useState(false);
   const [showPopup, setShowPopup] = useState<boolean>(false);
 
-  const changePopup = () => {
-    setShowPopup(!showPopup);
-  }
+  // const changePopup = () => {
+  //   setShowPopup(!showPopup);
+  // }
 
 
   function animatedLink() {
@@ -50,7 +52,7 @@ export default function Header() {
           <li><a href="#planos" className="scroll-link" onClick={handleScroll}>Planos</a></li>
           <li><a href="#perguntas" className="scroll-link" onClick={handleScroll}>FAQs</a></li>
           <li><a href="#contatos" className="scroll-link" onClick={handleScroll}>Contato</a></li>
-          <a onClick={changePopup}><li className="move-link negrito">Acesse agora</li></a>
+          <a href={link} target="_blank"><li className="move-link negrito">Teste Grátis</li></a>
         </ul>
       </nav>
     </header>

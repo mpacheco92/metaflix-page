@@ -4,17 +4,13 @@ import watch from '../images/watch.png';
 import metaflix from '../images/logo.png';
 import { images } from '../components/ArrayLogos';
 import { useEffect, useState } from 'react';
-import ButtonMain from '../components/ButtonMain';
 import Popup from '../components/Popup';
+
+const link = "https://api.whatsapp.com/send/?phone=5522992661644&text=Estou+vindo+do+site+e+quero+meu+acesso%21&type=phone_number&app_absent=0";
 
 export default function MainPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [showPopup, setShowPopup] = useState<boolean>(false);
-
-  const changePopup = () => {
-    setShowPopup(!showPopup);
-  }
-
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -71,14 +67,18 @@ export default function MainPage() {
 
   return (
     <div>
-      {showPopup && <Popup setShowPopup={setShowPopup}/>}
+      {showPopup && <Popup setShowPopup={setShowPopup} />}
       <Header />
       <main>
         <section className="part-one">
           <div className="texts-one">
             <h1>Você acabou de encontrar<br /> <span className="destaque">A MELHOR PLATAFORMA<br /> de IPTV</span> do Brasil</h1>
+            <h3 className="btn-acess">
+              <a href={link} target="_blank">
+                TESTE GRÁTIS AGORA
+              </a>
+            </h3>
             <h2>Assista seus programas favoritos sem travamentos,<br /> estabilidade de sinal e muita qualidade de som e imagem.</h2>
-            <ButtonMain />
           </div>
           <img src={tv3d} alt="tv-3d" className="tv-3d" />
         </section>
@@ -217,7 +217,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a onClick={changePopup}>
+                <a href={link} target="_blank">
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
 
@@ -265,7 +265,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a onClick={changePopup}>
+                <a href={link} target="_blank">
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -312,7 +312,7 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="plan-btn">
-                <a onClick={changePopup}>
+                <a href={link} target="_blank">
                   <i className="bi bi-arrow-right-square destaque-2"></i>
                   <h3>ASSINAR</h3>
                 </a>
@@ -367,8 +367,8 @@ export default function MainPage() {
             <h3 className="faq-question">Como funciona o pagamento e as renovações?</h3>
             <p className="faq-answer">Você pode renovar nossos planos mensais via PIX ou cartão de crédito, tudo direto com nosso suporte no WhatsApp. Além disso, temos alternativas mais prolongadas, como trimestrais e semestrais, com descontos proporcionais ao período. A decisão é sua. Lembre-se de que nossas assinaturas não possuem multas nem fidelidade.</p>
           </div>
-          <a onClick={changePopup}>
-            <h3 className="btn-acess">QUERO ACESSAR AGORA</h3>
+          <a href={link} target="_blank">
+            <h3 className="btn-acess">TESTE GRÁTIS AGORA</h3>
           </a>
         </section>
         <footer className="contact" id="contatos">
@@ -382,7 +382,7 @@ export default function MainPage() {
           <div className="footer-div">
             <h3>Fale Conosco</h3>
             <div>
-              <a href="https://tinyurl.com/metaflix-service" target="_blank" className="expand">
+              <a href={link} target="_blank" className="expand">
                 <i className="bi bi-whatsapp "></i>
                 <p>{`(22) 99266-1644`}</p>
               </a>
